@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/matiasmillain/golang_api/entity"
+	"github.com/matiasmillain/courses_api_rest/entity"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

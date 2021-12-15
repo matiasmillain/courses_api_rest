@@ -6,8 +6,8 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
-	"github.com/matiasmillain/golang_api/helper"
-	"github.com/matiasmillain/golang_api/service"
+	"github.com/matiasmillain/courses_api_rest/helper"
+	"github.com/matiasmillain/courses_api_rest/service"
 )
 
 //AuthorizeJWT validates the token user given, return 401 if not valid

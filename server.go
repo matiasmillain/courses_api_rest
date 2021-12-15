@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/matiasmillain/golang_api/config"
-	"github.com/matiasmillain/golang_api/controller"
-	"github.com/matiasmillain/golang_api/middleware"
-	"github.com/matiasmillain/golang_api/repository"
-	"github.com/matiasmillain/golang_api/service"
+	"github.com/matiasmillain/courses_api_rest/config"
+	"github.com/matiasmillain/courses_api_rest/controller"
+	"github.com/matiasmillain/courses_api_rest/middleware"
+	"github.com/matiasmillain/courses_api_rest/repository"
+	"github.com/matiasmillain/courses_api_rest/service"
 	"gorm.io/gorm"
 )
 

@@ -1,4 +1,4 @@
-module github.com/matiasmillain/golang_api
+module github.com/matiasmillain/courses_api_rest
 
 // +heroku goVersion go1.14
 go 1.16

@@ -3,7 +3,7 @@ package repository
 import (
 	"log"
 
-	"github.com/matiasmillain/golang_api/entity"
+	"github.com/matiasmillain/courses_api_rest/entity"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

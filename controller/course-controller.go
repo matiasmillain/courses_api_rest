@@ -7,10 +7,10 @@ import (
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
-	"github.com/matiasmillain/golang_api/dto"
-	"github.com/matiasmillain/golang_api/entity"
-	"github.com/matiasmillain/golang_api/helper"
-	"github.com/matiasmillain/golang_api/service"
+	"github.com/matiasmillain/courses_api_rest/dto"
+	"github.com/matiasmillain/courses_api_rest/entity"
+	"github.com/matiasmillain/courses_api_rest/helper"
+	"github.com/matiasmillain/courses_api_rest/service"
 )
 
 //CourseController is a ...

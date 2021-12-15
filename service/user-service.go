@@ -4,9 +4,9 @@ import (
 	"log"
 
 	"github.com/mashingan/smapping"
-	"github.com/matiasmillain/golang_api/dto"
-	"github.com/matiasmillain/golang_api/entity"
-	"github.com/matiasmillain/golang_api/repository"
+	"github.com/matiasmillain/courses_api_rest/dto"
+	"github.com/matiasmillain/courses_api_rest/entity"
+	"github.com/matiasmillain/courses_api_rest/repository"
 )
 
 //UserService is a contract.....
