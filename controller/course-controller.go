@@ -86,6 +86,11 @@ func (c *courseController) Update(context *gin.Context) {
 		context.JSON(http.StatusBadRequest, res)
 		return
 	}
+	id, err := strconv.ParseUint(context.Param("id"), 0, 0)
+	if err != nil {
+		response := helper.BuildErrorResponse("Failed tou get id", "No param id were found", helper.EmptyObj{})
+		context.JSON(http.StatusBadRequest, response)
+	}
 
 	authHeader := context.GetHeader("Authorization")
 	token, errToken := c.jwtService.ValidateToken(authHeader)
@@ -94,7 +99,7 @@ func (c *courseController) Update(context *gin.Context) {
 	}
 	claims := token.Claims.(jwt.MapClaims)
 	userID := fmt.Sprintf("%v", claims["user_id"])
-	if c.courseService.IsAllowedToEdit(userID, courseUpdateDTO.ID) {
+	if c.courseService.IsAllowedToEdit(userID, id) {
 		id, errID := strconv.ParseUint(userID, 10, 64)
 		if errID == nil {
 			courseUpdateDTO.UserID = id
