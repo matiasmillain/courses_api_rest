@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/matiasmillain/courses_api_rest/entity"
-	"gorm.io/driver/mysql"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -23,7 +23,7 @@ func SetupDatabaseConnection() *gorm.DB {
 	dbPort := os.Getenv("DB_PORT")
 
 	dsn := fmt.Sprintf("host=%s user=%s password=%s port=%s dbname=%s sslmode=require TimeZone=America/Buenos_Aires", dbHost, dbUser, dbPass, dbPort, dbName)
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("Failed to create a connection to database")
 	}
