@@ -1,5 +1,6 @@
 module github.com/matiasmillain/golang_api
 
+// +heroku goVersion go1.14
 go 1.16
 
 require (
