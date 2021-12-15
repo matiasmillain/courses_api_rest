@@ -5,18 +5,26 @@ Podemos acceder a traves de la siguiente URL:
 https://courses-api-rest.herokuapp.com
 ```
 
+# INTEGRANTES
+1. Matias Millain (matimillain@gmail.com)
+2. -
+3. -
+4. -
+5. -
+6. -
+
 
 # DOCOMENTACIÓN
 
 ## REGISTER
 Registro de nuevo usuario
 
-POST
+**POST**
 ```
 https://courses-api-rest.herokuapp.com/api/auth/register
 ```
 
-REQUEST BODY
+**REQUEST BODY**
 ```
 {
     "name": "Test name user",
@@ -25,7 +33,7 @@ REQUEST BODY
 }
 ```
  
-RESPONSE SUCCESS (Status: 201)
+**RESPONSE SUCCESS (Status: 201)**
 ```
 {
     "status": true,
@@ -40,7 +48,7 @@ RESPONSE SUCCESS (Status: 201)
 }
 ```
  
-RESPONSE ERROR (Status : 400)
+**RESPONSE ERROR (Status : 400)**
 ```
 {
     "status": false,
@@ -55,12 +63,12 @@ RESPONSE ERROR (Status : 400)
 ## LOGIN
 Autenticamos con email y password
 
-POST
+**POST**
 ```
 https://courses-api-rest.herokuapp.com/api/auth/login
 ```
  
-REQUEST JSON BODY
+**REQUEST JSON BODY**
 ```
 {
     "email": "test-user-email@gmail.com",
@@ -68,7 +76,7 @@ REQUEST JSON BODY
 }
 ```
  
-RESPONSE (Status: 200)
+**RESPONSE (Status: 200)**
 ```
 {
     "status": true,
@@ -83,7 +91,7 @@ RESPONSE (Status: 200)
 }
 ```
  
-RESPONSE ERROR, CREDENCIALES ERRÓNEAS (Status: 401)
+**RESPONSE ERROR, CREDENCIALES ERRÓNEAS (Status: 401)**
 ```
 {
     "status": false,
@@ -98,17 +106,17 @@ RESPONSE ERROR, CREDENCIALES ERRÓNEAS (Status: 401)
 ## GET PROFILE
 Obtenemos el perfil de usuario logueado
 
-GET
+**GET**
 ```
 https://courses-api-rest.herokuapp.com/api/user/profile
 ```
  
-HEADER
+**HEADER**
 ```
 Authorization: authTOKEN
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -125,17 +133,17 @@ RESPONSE
 ## UPDATE PROFILE
 Actualizar datos del usuario pasado por auth token
 
-PUT
+**PUT**
 ```
 https://courses-api-rest.herokuapp.com/api/user/profile
 ```
  
-HEADER
+**HEADER**
 ```
 Authorization: authTOKEN
 ```
  
-REQUEST BODY
+**REQUEST BODY**
 ```
 {
     "name": "Test new user name",
@@ -143,7 +151,7 @@ REQUEST BODY
 }
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -161,17 +169,17 @@ RESPONSE
 ## ALL COURSES
 Solo se visualizan los del usuario logueado
 
-GET
+**GET**
 ```
 https://courses-api-rest.herokuapp.com/api/course
 ```
  
-HEADER
+**HEADER**
 ```
 Authorization: authTOKEN
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -205,17 +213,17 @@ RESPONSE
 ## CREATE COURSE
 Creamos un curso y lo asignamos al usuario conectado a través del auth token
 
-POST
+**POST**
 ```
 https://courses-api-rest.herokuapp.com/api/course
 ```
  
-HEADER
+**HEADER**
 ```
 Authorization: authTOKEN
 ```
  
-REQUEST JSON BODY
+**REQUEST JSON BODY**
 ```
 {
     "name": "New course name”,
@@ -223,7 +231,7 @@ REQUEST JSON BODY
 }
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -245,17 +253,17 @@ RESPONSE
 ## FIND ONE COURSE BY ID
 Solo podemos obtener nuestros cursos creados
 
-GET
+**GET**
 ```
 https://courses-api-rest.herokuapp.com/api/course/{courseID}
 ```
  
-HEADER
+**HEADER**
 ```
 Authorization: authTOKEN
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -278,17 +286,17 @@ RESPONSE
  
 Solo podemos actualizar nuestros cursos, si tratamos de ingresar otro id, obtenemos un error.
 
-PUT
+**PUT**
 ```
 https://golang-heroku.herokuapp.com/api/course/{courseID}
 ```
 
-HEADERS
+**HEADERS**
 ```
 Authorization: authTOKEN
 ```
  
-REQUEST JSON BODY
+**REQUEST JSON BODY**
 ```
 {
     "name": "Test modify course name",
@@ -296,7 +304,7 @@ REQUEST JSON BODY
 }
 ```
  
-RESPONSE
+**RESPONSE**
 ```
 {
     "status": true,
@@ -319,12 +327,12 @@ RESPONSE
 
 Solo podemos eliminar nuestros cursos creados
 
-DELETE
+**DELETE**
 ```
 https://courses-api-rest.herokuapp.com/api/product/{courseID}
 ```
  
-Response success (Status: 200)
+**Response success (Status: 200)**
 ```
 {
     "status": true,
