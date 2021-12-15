@@ -1,1 +1,1 @@
-web: courses-api-rest
+web: courses_api_rest
