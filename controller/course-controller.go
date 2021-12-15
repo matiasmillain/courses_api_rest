@@ -90,6 +90,7 @@ func (c *courseController) Update(context *gin.Context) {
 	if err != nil {
 		response := helper.BuildErrorResponse("Failed tou get id", "No param id were found", helper.EmptyObj{})
 		context.JSON(http.StatusBadRequest, response)
+		return
 	}
 
 	authHeader := context.GetHeader("Authorization")
@@ -119,6 +120,7 @@ func (c *courseController) Delete(context *gin.Context) {
 	if err != nil {
 		response := helper.BuildErrorResponse("Failed tou get id", "No param id were found", helper.EmptyObj{})
 		context.JSON(http.StatusBadRequest, response)
+		return
 	}
 	course.ID = id
 	authHeader := context.GetHeader("Authorization")
