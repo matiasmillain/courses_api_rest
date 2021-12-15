@@ -46,6 +46,7 @@ func main() {
 		courseRoutes.GET("/:id", courseController.FindByID)
 		courseRoutes.PUT("/:id", courseController.Update)
 		courseRoutes.DELETE("/:id", courseController.Delete)
+		courseRoutes.GET("/healt")
 	}
 
 	r.Run()
